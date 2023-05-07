@@ -81,7 +81,7 @@ img {
  }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
 .container {
     max-width: 1158px;
     padding-left: 15px;
@@ -269,21 +269,33 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-    .site-nav {
-        display: none;
-    }
+.site-nav {
+    display: none;
+  }
 }
 
 /* Contacts */
 .container-address {
     display: flex;
-
     margin-left: auto;
 }
 
 .address-list {
     display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+.address-list {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+.address-list {
+    flex-direction: row;
     gap: 40px;
+  }
 }
 
 .address {
@@ -291,13 +303,24 @@ img {
 }
 
 .address .link {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: 
+    transition-timing-function:
         cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 1158px) {
+.address .link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    }
 }
 
 .address .link:hover,
@@ -332,18 +355,34 @@ img {
 .hero-title {
     display: block;
 
-    max-width: 496px;
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
 
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
 
     color: var(--white-color);
+}
+
+@media only screen and (min-width: 768px) {
+.hero-title {
+    max-width: 496px;
+    margin-bottom: 36px;
+
+    font-size: 56px;
+    line-height: 1.07;    
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+.hero-title {
+    margin-bottom: 48px;
+  }
 }
 
 .hero .button {
@@ -700,6 +739,12 @@ img {
     border-radius: 4px;
 }
 
+@media only screen and (max-width: 427px) {
+.modal {
+    width: 90%;
+  }
+}
+
 .modal-close-btn {
     display: flex;
     justify-content: center;
@@ -1036,8 +1081,13 @@ img {
 .mobile-socials {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
     gap: 56px;
+}
+@media only screen and (max-width: 410px) {
+    .mobile-socials {
+        justify-content: space-between;
+        gap: 28px;
+  }
 }
 
 .mobile-socials-link {
