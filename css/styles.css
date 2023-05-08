@@ -719,6 +719,10 @@ img {
 .footer-logo-section {
     margin-right: 120px;
   }
+
+.footer .logo {
+    text-align: start;
+}
 }
 
 /* Footer socials */
@@ -769,7 +773,13 @@ img {
 }
 
 .newsletter-form-field {
-    /* width: 398px; */
+    width: 398px;
+}
+
+@media only screen and (max-width: 427px) {
+.newsletter-form-field {
+    width: 264px;
+  }
 }
 
 .newsletter-form-input {
@@ -822,7 +832,7 @@ img {
     gap: 24px;
   }
 
-    .newsletter-form-field {
+.newsletter-form-field {
     width: 264px;
   }
 }
