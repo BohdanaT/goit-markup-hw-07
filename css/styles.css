@@ -440,7 +440,7 @@ img {
         padding-top: 188px;
         padding-bottom: 188px;
     }
-    
+
     .hero-title {
         margin-bottom: 48px;
     }
@@ -971,6 +971,7 @@ img {
     margin-left: auto;
     margin-bottom: 24px;
 
+    cursor: pointer;
     background-color: var(--cornflower-accent);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1118,6 +1119,8 @@ img {
     align-items: center;
     
     margin-bottom: 24px;
+
+    cursor: pointer;
 }
 
 .policy-checkbox {
