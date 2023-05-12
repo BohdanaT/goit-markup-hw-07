@@ -71,8 +71,8 @@ img {
     padding-left: 16px;
     padding-right: 16px;
 
-    outline: 1px solid red;
-    outline-offset: 2px;
+    /* outline: 1px solid red;
+    outline-offset: 2px; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -915,8 +915,6 @@ img {
         cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -947,7 +945,7 @@ img {
   }
 }
 
-@media screen and (orientation:landscape) {
+@media screen and (max-height: 584px) {
     .backdrop {
         overflow: auto;
     }
@@ -1303,6 +1301,7 @@ img {
     justify-content: flex-start;
     gap: 56px;
 }
+
 @media only screen and (max-width: 410px) {
 .mobile-socials {
     justify-content: space-between;
@@ -1329,6 +1328,12 @@ img {
 
 .mobile-socials-icon {
     fill: var(--cloud-color);
+}
+
+@media only screen and (max-width: 427px) {
+    .mobile-contacts-tel {
+        font-size: 20px;
+    }
 }
 /*
   |============================
