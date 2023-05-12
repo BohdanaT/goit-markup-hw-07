@@ -443,7 +443,6 @@ img {
 
 /* Benefits */
 .benefits-section {
-    padding-bottom: 96px;
     padding-left: 0;
     padding-right: 0;
 }
@@ -952,6 +951,11 @@ img {
     .backdrop {
         overflow: auto;
     }
+    
+    .modal {
+        top: 0;
+        transform: translate(-50%, 0);
+    }
 }
 
 .modal-close-btn {
@@ -1332,17 +1336,21 @@ img {
   |============================
 */
 .portfolio-section {
-    padding-top: 96px;
-    padding-bottom: 120px;
+    padding-top: 64px;
 }
 
 /* Page filter */
 .filter-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: start;
     gap: 24px;
 
-    margin-bottom: 72px;
+    margin-bottom: 48px;
+}
+
+.portfolio-button {
+    padding: 8px 16px;
 }
 
 .filter-list .button {
@@ -1365,16 +1373,38 @@ img {
     background-color: var(--pressed-state-color);
 }
 
+@media only screen and (max-width: 767px) {
+    .filter-list {
+        max-width: 280px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .portfolio-section {
+        padding-top: 96px;
+    }
+
+   .filter-list {
+        justify-content: center;
+        margin-bottom: 64px;
+    }
+
+    .portfolio-button {
+        padding: 12px 24px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .filter-list {
+        margin-bottom: 72px;
+    }
+}
+
 /* Work examples */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
     row-gap: 48px;
-    column-gap: 24px;
-}
-
-.portfolio-item {
-    flex-basis: calc((100% - 48px) / 3);
 }
 
 .portfolio-link {
@@ -1439,4 +1469,37 @@ img {
 
     border: 1px solid var(--cornflower-accent);
     border-top: none;
+}
+
+.portfolio-sub-title {
+    margin-bottom: 8px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;    
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+}
+
+.portfolio-work-descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+    .portfolio-list {
+        column-gap: 24px;
+    }
+
+    .portfolio-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .portfolio-item {
+        flex-basis: calc((100% - 48px) / 3);
+    }
 }
