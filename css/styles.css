@@ -318,8 +318,8 @@ img {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     
     
     background-color: var(--dark-color);
@@ -436,6 +436,11 @@ img {
 }
 
 @media only screen and (min-width: 1158px) {
+    .hero {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+    
     .hero-title {
         margin-bottom: 48px;
     }
